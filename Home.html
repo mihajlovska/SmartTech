@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src = "jquery/jquery.js"></script>
+    <script src = "jquery/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            var dialog;
+           dialog = $( "#dialog" ).dialog({
+                autoOpen: false,
+                modal: true,
+                buttons:{
+                    "Done": function(){
+                        dialog.dialog("close");
+                    },
+                    "Cancel": function(){
+                        dialog.dialog("close");
+                    }
+                },
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $( "#btn" ).on( "click", function() {
+                $( "#dialog" ).dialog( "open" );
+            });
+        } );
+    </script>
+</head>
+<body>
+<div id="menu-wrapper">
+    <nav class="menu">
+        <a href="Home.html">Home</a>
+        <a href="#products">Products</a>
+        <a href="#cart">Cart</a>
+        <a href="#about">About Us</a>
+    </nav>
+</div>
+<div class="logo">
+    <img src="Images\Home\SmartTech_Logo_For_Whiteback.png">
+</div>
+<div class="img1">
+    <img src="Images\Home\520623234.jpg">
+</div>
+
+<div id="products">
+    <h2>PRODUCTS</h2>
+    <div class="line"></div>
+        <div id="phones">
+        <img src="Images\Products\phone1.png">
+        <p><span onclick="add_to_cart('Iphone4')">+</span><a href="Html\Phones\iphone4.html">IPhone 4 </a></p>
+        <p><span onclick="add_to_cart('Iphone5s')">+</span><a href="Html\Phones\iPhone5s.html">IPhone 5s </a></p>
+        <p><span onclick="add_to_cart('Iphone6')">+</span><a href="Html\Phones\iPhone6.html">IPhone 6 </a></p>
+        <p><span onclick="add_to_cart('Iphone7')">+</span><a href="Html\Phones\iphone7.html">IPhone 7 </a></p>
+        <p><span onclick="add_to_cart('SamsungGalaxyJ3')">+</span><a href="Html\Phones\sgj3.html">Samsung Galaxy J3 </a></p>
+        <p><span onclick="add_to_cart('SamsungGalaxyJ5')">+</span><a href="Html\Phones\sgj5.html">Samsung Galaxy J5 </a></p>
+        <p><span onclick="add_to_cart('SamsungGalaxyA3')">+</span><a href="Html\Phones\sga3.html">Samsung Galaxy A3 </a></p>
+        <p><span onclick="add_to_cart('SamsungGalaxyA5')">+</span><a href="Html\Phones\sga5.html">Samsung Galaxy A5 </a></p>
+    </div>
+
+    <div id="pc">
+        <img src="Images\Products\monitor1.png">
+        <p><span onclick="add_to_cart('Asus')">+</span><a href="Html\Laptop\asus.html">Asus </a></p>
+        <p><span onclick="add_to_cart('Acer')">+</span><a href="Html\Laptop\acer.html">Acer </a></p>
+        <p><span onclick="add_to_cart('Dell')">+</span><a href="Html\Laptop\Dell.html">Dell </a></p>
+        <p><span onclick="add_to_cart('Lenovo')">+</span><a href="Html\Laptop\lenovo.html">Lenovo </a></p>
+        <p><span onclick="add_to_cart('HP')">+</span><a href="Html\Laptop\HP.html">HP </a></p>
+    </div>
+
+    <div id="tablet">
+        <img src="Images\Products\tablet.png">
+        <p><span onclick="add_to_cart('SamsungGalaxyTab3')">+</span><a href="Html\Tablet\sgtS2.html">Samsung Galaxy Tab S2 </a></p>
+        <p><span onclick="add_to_cart('AcerTabIconiaOne')">+</span><a href="Html\Tablet\acer-tab.html">ACER TAB Iconia One </a></p>
+        <p><span onclick="add_to_cart('AsusTransformen')">+</span><a href="Html\Tablet\asus-tab.html">ASUS TRANSFORMEN </a></p>
+        <p><span onclick="add_to_cart('LenovoYogaTab3Pro')">+</span><a href="Html\Tablet\lenovo-tab.html">Lenovo Yoga Tab 3 Pro </a></p>
+    </div>
+</div>
+
+<div id="cart">
+    <div id="cartwrapper">
+        <h2>YOUR CART</h2>
+        <button id="btn">BUY</button>
+    </div>
+    <table id="projects">
+        <thead>
+        <th>Mobile Phone</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div id="dialog">
+    <form>
+        <h3>Price: </h3>
+        <fieldset>
+            <label for="card">Insert your card account</label>
+            <input id="card" type="text" class="text ui-widget-content ui-corner-all">
+        </fieldset>
+    </form>
+</div>
+
+<script>
+
+
+
+    var cart = {};
+    var mobilePhonePrices = {
+        'Iphone4' : 300,
+        'Iphone5s' : 400,
+        'Iphone6' : 500,
+        'Iphone7' : 600,
+        'SamsungGalaxyJ3' : 200,
+        'SamsungGalaxyJ5' : 300,
+        'SamsungGalaxyA3' : 250,
+        'SamsungGalaxyA5' : 350,
+        'Asus' : 500,
+        'Acer' : 300,
+        'Dell' : 600,
+        'Lenovo' : 400,
+        'HP' : 700,
+        'SamsungGalaxyTab3' : 150,
+        'AcerTabIconiaOne' : 180,
+        'AsusTransformen' : 200,
+        'LenovoYogaTab3Pro' : 250
+    };
+    function add_to_cart(mobilePhone){
+        toastr.info('You added ' + mobilePhone + ' to cart');
+
+        if(!cart[mobilePhone]){
+            cart[mobilePhone] = 1;
+            addRow(mobilePhone);
+        }
+        else {
+            cart[mobilePhone]++;
+            findRow(mobilePhone);
+        }
+
+        document.cookie = 'cart='+JSON.stringify('cart');
+
+    }
+
+    function findRow(mobilePhone){
+        var rows = document.getElementById('projects').rows;
+        var found = null;
+        for(var i = 0; i < rows.length; i++){
+            var row = rows[i];
+            for(var j = 0; j < row.cells.length; j++){
+                if(row.cells[j].innerHTML === mobilePhone){
+                    found = row;
+                    break;
+                }
+            }
+            if(found)
+                break;
+        }
+        var quantity = cart[mobilePhone];
+        var price = quantity * mobilePhonePrices[mobilePhone];
+        found.cells[1].innerHTML = quantity;
+        found.cells[2].innerHTML = price;
+    }
+
+
+    function buy(index) {
+        var t = parseInt(document.getElementById(index).value);
+        sum += t * items[index].price;
+        if(items[index].availableInStock(t)) {
+            document.getElementById('total').innerHTML = "Total bought: " + sum;
+        return true;
+    }
+        return false;
+    }
+
+    function addRow(mobilePhone){
+        var tableRef = document.getElementById('projects').getElementsByTagName('tbody')[0];
+
+
+        var newRow	= tableRef.insertRow(tableRef.rows.length);
+        var newCell0  = newRow.insertCell(0);
+        var newCell1  = newRow.insertCell(1);
+        var newCell2  = newRow.insertCell(2);
+        var newCell3  = newRow.insertCell(3);
+
+        newCell0.innerHTML = mobilePhone;
+        newCell1.innerHTML = cart[mobilePhone];
+        newCell2.innerHTML = mobilePhonePrices[mobilePhone];
+        newCell3.innerHTML = "<button id='removeBtn' onclick='removeRow(this); '>Remove</button>"
+
+    }
+    function removeRow(ref) {
+        tr = ref.parentNode.parentNode;
+        tr.parentNode.removeChild(tr);
+    }
+
+
+    $(document).ready(function(){
+        $("#phones img").click(function(){
+            $("#phones p").slideToggle(1000);
+        });
+    });
+
+    $(document).ready(function(){
+        $("#pc img").click(function(){
+            $("#pc p").slideToggle(1000);
+        });
+    });
+
+    $(document).ready(function(){
+        $("#tablet img").click(function(){
+            $("#tablet p").slideToggle(1000);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body class="products-body">
+
+<div>
+    <nav class="menu">
+        <a href="Home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a>Cart</a>
+        <a>About Us</a>
+    </nav>
+</div>
+<div id="all">
+    <div id="phones">
+       <a><img src="Images\Products\phone1.png"></a>
+        <a>IPhone 4 </a>
+        <a>IPhone 5s </a>
+        <a>IPhone 6 </a>
+        <a>IPhone 7 </a>
+        <a>Samsung Galaxy J3 </a>
+        <a>Samsung Galaxy J5 </a>
+        <a>Samsung Galaxy A3 </a>
+        <a>Samsung Galaxy A5 </a>
+    </div>
+
+    <div id="pc">
+        <a><img src="Images\Products\monitor1.png"></a>
+        <a>Asus </a>
+        <a>Acer </a>
+        <a>Dell </a>
+        <a>Lenovo </a>
+        <a>HP </a>
+    </div>
+
+    <div id="tablet">
+        <a><img src="Images\Products\tablet.png"></a>
+        <a>Samsung Galaxy Tab S2 </a>
+        <a>ACER TAB Iconia One </a>
+        <a>ASUS TRANSFORMEN </a>
+        <a>Lenovo Yoga Tab 3 Pro </a>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+        $("#phones").click(function(){
+            $("#phones p").slideToggle(1000);
+        });
+    });
+    $(document).ready(function(){
+        $("#phones").click(function(){
+            $("#phones button").slideToggle(1000);
+        });
+    });
+
+    $(document).ready(function(){
+        $("#pc").click(function(){
+            $("#pc p").slideToggle(1000);
+        });
+    });
+
+    $(document).ready(function(){
+        $("#tablet").click(function(){
+            $("#tablet p").slideToggle(1000);
+        });
+    });
+</script>
+</body>
+</html>

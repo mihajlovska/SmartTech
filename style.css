@@ -1,0 +1,192 @@
+@font-face {
+    font-family: aspira;
+    src: url(Aspira-Thin.otf);
+}
+body{
+    margin: 0;
+}
+#menu-wrapper{
+    background: lightblue;
+    padding: 15px;
+}
+.menu{
+    width: 40%;
+    margin-left: 800px;
+}
+.menu a{
+    padding: 15px;
+    color: #223872;
+    text-decoration: none;
+    font: 20px  "aspira"
+
+}
+.menu a:hover{
+    background: #223872;
+    color: white;
+    font-weight: bold;
+}
+.logo{
+    margin-left: 330px;
+    margin-top: 50px;
+    height: 221px;
+}
+.img1{
+    margin-left: 378px;
+}
+#phones p{
+    display: none;
+}
+#slide button{
+    display: none;
+}
+#pc p{
+    display: none;
+}
+#tablet p{
+    display: none;
+}
+#pc{
+    display:inline;
+    float:left;
+    margin:20px;
+    margin-top: 100px;
+    font: 20px  "aspira"
+    }
+#phones{
+    display:inline;
+    float:left;
+    margin:20px;
+    margin-top: 100px;
+    font: 20px  "aspira";
+    height: 641px;
+}
+#tablet{
+    display:inline;
+    float:left;
+    margin:20px;
+    margin-top: 100px;
+    font: 20px  "aspira"
+}
+#products{
+    padding-left: 178px;
+    height: 970px;
+    background-color: ghostwhite;
+}
+#phones h3{
+    border: 3px dimgray solid;
+    border-radius: 20px;
+    padding-left: 91px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-weight: bold;
+    color: royalblue;
+    font: 34px  "aspira"
+}
+#tablet h3{
+    border: 2px cornflowerblue solid;
+    padding-left: 120px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font: 20px  "aspira"
+}
+#pc h3{
+    border: 2px cornflowerblue solid;
+    padding-left: 115px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font: 20px  "aspira"
+}
+#phones img{
+    width: 300px;
+    cursor: pointer;
+}
+#pc img{
+    width: 300px;
+    cursor: pointer;
+}
+#tablet img{
+    width: 300px;
+    cursor: pointer;
+}
+#products h2{
+    text-align: center;
+    padding-right: 175px;
+    padding-top: 71px;
+    height: 54px;
+    color: steelblue;
+    font: 100px  "aspira"
+}
+.line{
+    border: 0;
+    height: 1px;
+    margin-left: 200px;
+    width: 595px;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    background-color: white;
+}
+#products a{
+    text-decoration: none;
+    color: #1c94c4;
+}
+#btn{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: dodgerblue;
+    border: 4px solid powderblue;
+    border-radius: 5px;
+    font: 24px "aspira";
+    color: white;
+    display: inline;
+    margin-left: 1013px;
+    font-weight: bold;
+}
+#products span {
+    background: #223872;
+    color: white;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+}
+#products span:hover{
+    background: cadetblue;
+}
+#cart h2{
+    margin-left: 400px;
+    height: 54px;
+    color: steelblue;
+    font: 100px  "aspira";
+    display: inline;
+
+}
+#projects {
+    font: 25px "aspira";
+    margin-left: 400px;
+    padding-top: 42px;
+    padding-left: 19px;
+}
+#projects th{
+    padding-right: 75px;
+    padding-bottom: 7px;
+
+}
+#removeBtn{
+    padding: 10px;
+    border: 1px solid cornflowerblue;
+    background: lightsteelblue;
+    font: 15px "aspira";
+    font-weight: bold;
+}
+#cartwrapper{
+    margin-top: 56px;
+}
+#cart{
+    height: 600px;
+}
